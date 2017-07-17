@@ -17,6 +17,7 @@ Scene_Map.prototype.create = function() {
     {
         $globalLevel += $gameParty.members()[i].level;
     }
+    $gameVariables.setValue(34, $globalLevel);
 };
 
 var alias_prototype_removeActor = Game_Party.prototype.removeActor;
@@ -27,6 +28,7 @@ Game_Party.prototype.removeActor = function(actorId) {
     {
         $globalLevel += $gameParty.members()[i].level;
     }
+        $gameVariables.setValue(34, $globalLevel);
 };
 
 var alias_prototype_addActor = Game_Party.prototype.addActor;
@@ -37,6 +39,7 @@ Game_Party.prototype.addActor = function(actorId) {
     {
         $globalLevel += $gameParty.members()[i].level;
     }
+    $gameVariables.setValue(34, $globalLevel);
 };
 
 var alias_prototype_onItemOk = Scene_Equip.prototype.onItemOk;
@@ -63,6 +66,7 @@ Scene_Equip.prototype.onItemOk = function() {
     {
         $globalLevel += $gameParty.members()[i].level;
     }
+    $gameVariables.setValue(34, $globalLevel);
 };
 
 var alias_prototype_optimize = Scene_Equip.prototype.commandOptimize;
@@ -89,6 +93,7 @@ Scene_Equip.prototype.commandOptimize = function() {
     {
         $globalLevel += $gameParty.members()[i].level;
     }
+    $gameVariables.setValue(34, $globalLevel);
 };
 
 var alias_prototype_clear = Scene_Equip.prototype.commandClear;
@@ -115,6 +120,7 @@ Scene_Equip.prototype.commandClear = function() {
     {
         $globalLevel += $gameParty.members()[i].level;
     }
+    $gameVariables.setValue(34, $globalLevel);
 };
 
 var gs_command = Game_Interpreter.prototype.pluginCommand;
@@ -127,5 +133,6 @@ Game_Interpreter.prototype.pluginCommand = function(command, args){
         {
             $globalLevel += $gameParty.members()[i].level;
         }
+        $gameVariables.setValue(34, $globalLevel);
     }
 };
